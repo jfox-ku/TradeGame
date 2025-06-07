@@ -1,0 +1,41 @@
+﻿using System.Collections.Generic;
+
+namespace DefaultNamespace.Inventory
+{
+    public class Inventory : IInventory
+    {
+        public int Capacity { get; private set; }
+        public int ElementCount => elements.Count;
+        public bool IsFull => ElementCount >= Capacity;
+        public IReadOnlyList<IInventoryElement> GetElements => elements.AsReadOnly();
+        
+        private readonly List<IInventoryElement> elements;
+
+        public Inventory(List<IInventoryElement> elements, int capacity) {
+                this.elements = elements;
+                Capacity = capacity;
+        }
+        
+        public bool ContainsElement(IInventoryElement element) {
+            return elements.Contains(element);
+        }
+
+        public void AddElement(IInventoryElement element) {
+            if (ContainsElement(element)) {
+                throw new System.ArgumentException("Element already in inventory", nameof(element));
+            }
+
+            if (IsFull) {
+                throw new System.InvalidOperationException("Inventory is full");
+            }
+            elements.Add(element);
+        }
+
+        public void RemoveElement(IInventoryElement element) {
+            if (!ContainsElement(element)) {
+                throw new System.ArgumentException("Element not found in inventory", nameof(element));
+            }
+            elements.Remove(element);
+        }
+    }
+}
