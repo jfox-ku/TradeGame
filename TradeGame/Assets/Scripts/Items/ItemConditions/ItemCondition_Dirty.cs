@@ -10,7 +10,7 @@ namespace DefaultNamespace.Items.ItemConditions
         
         private float _currentDirtyAmount;
         
-        private float dirtyPercentNormalized => Mathf.Clamp(_currentDirtyAmount, -MAX_DIRTY_AMOUNT, MAX_DIRTY_AMOUNT) / MAX_DIRTY_AMOUNT;
+        private float dirtyPercentNormalized => Mathf.Clamp(_currentDirtyAmount, 0, MAX_DIRTY_AMOUNT) / MAX_DIRTY_AMOUNT;
 
 
         protected override float ValuePercentDelta => -dirtyPercentNormalized;

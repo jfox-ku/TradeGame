@@ -8,5 +8,19 @@
         {
             Name = name;
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is IItemCategory otherCategory)
+            {
+                return Name == otherCategory.Name;
+            }
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return Name.GetHashCode();
+        }
     }
 }

@@ -26,6 +26,5 @@ namespace DefaultNamespace.Items
             Description = description;
             Categories = categories;
         }
-       
     }
 }
