@@ -6,7 +6,7 @@ namespace DefaultNamespace.Trader
     public interface ITrader : IValueEvaluator
     {
         IInventory Inventory { get; }
-        IInventory TradeInventory { get; }
+        IInventory InTradeInventory { get; }
         ITraderData Data { get; }
         
         

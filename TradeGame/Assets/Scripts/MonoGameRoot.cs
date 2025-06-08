@@ -7,18 +7,14 @@ using UnityEngine;
 
 public class MonoGameRoot : MonoBehaviour, IGameRoot
 {
-    public List<InterfaceReference<ISystem>> Systems;
-    
-    private bool _initialized = false;
+    public List<InterfaceReference<ISystemsFactory>> SystemsFactory;
+    private List<ISystem> _systems = new List<ISystem>();
     private List<ITickSystem> _tickSystems = new List<ITickSystem>();
     
-    // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         Initialize();
     }
-
-    // Update is called once per frame
+    
     void Update() {
         Tick(Time.deltaTime);
     }
@@ -26,40 +22,45 @@ public class MonoGameRoot : MonoBehaviour, IGameRoot
     private void OnDisable() {
         Shutdown();
     }
-
-    public void AddSystem(ISystem system) {
-        throw new System.InvalidOperationException("MonoGameRoot does not support adding systems at runtime. Add them in the inspector.");
-    }
-
-    public ISystem GetSystem<T>() where T : ISystem {
-        foreach (var systemInterfaceReference in Systems) {
-            if (systemInterfaceReference.Value is T system) {
-                return system;
+    
+    public void Initialize() {
+        _systems.Clear();
+        
+        foreach (var systemFactoryReference in SystemsFactory) {
+            var systems = systemFactoryReference.Value.CreateSystems();
+            _systems.AddRange(systems);
+        }
+        
+        foreach (var system in _systems) {
+            if (system is ITickSystem tickSystem) {
+                _tickSystems.Add(tickSystem);
             }
         }
-        return null;
+        
+        foreach (var system in _systems) {
+            system.Initialize();
+        }
     }
-
+    
     public void Tick(float deltaTime) {
         foreach (var tickSystem in _tickSystems) {
             tickSystem.Tick(deltaTime);
         }
     }
 
-    public void Initialize() {
-        foreach (var systemInterfaceReference in Systems) {
-            if (systemInterfaceReference.Value is ITickSystem tickSystem) {
-                _tickSystems.Add(tickSystem);
-            }
-        }
-        
-        foreach (var systemInterfaceReference in Systems) {
-            systemInterfaceReference.Value.Initialize();
-        }
-        
-        _initialized = true;
+    public void AddSystem(ISystem system) {
+        throw new System.InvalidOperationException("MonoGameRoot does not support adding systems at runtime. Add them in the inspector.");
     }
 
+    public ISystem GetSystem<T>() where T : ISystem {
+        foreach (var system in _systems) {
+            if (system is T castSystem) {
+                return castSystem;
+            }
+        }
+        return null;
+    }
+    
     public void StartGame() {
         
     }

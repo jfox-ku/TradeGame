@@ -7,13 +7,13 @@ namespace DefaultNamespace.Trader
     public class Trader : ITrader
     {
         public IInventory Inventory { get; }
-        public IInventory TradeInventory { get; }
+        public IInventory InTradeInventory { get; }
         public ITraderData Data { get; }
 
         public Trader(IInventory inventory,  ITraderData data)
         {
             Inventory = inventory;
-            TradeInventory = new EmptyInventoryFactory().CreateInventoryOfCapacity(4);
+            InTradeInventory = new EmptyInventoryFactory().CreateInventoryOfCapacity(4);
             Data = data;
         }
         

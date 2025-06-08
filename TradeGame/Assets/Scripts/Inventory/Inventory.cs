@@ -1,9 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DefaultNamespace.Inventory
 {
+    [Serializable]
     public class Inventory : IInventory
     {
+        public const int DEFAULT_CAPACITY = 10;
+        
         public int Capacity { get; private set; }
         public int ElementCount => elements.Count;
         public bool IsFull => ElementCount >= Capacity;
