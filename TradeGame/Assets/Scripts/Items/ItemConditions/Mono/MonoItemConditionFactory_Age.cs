@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DefaultNamespace.Items.ItemConditions
+namespace TradeGameNamespace.Items.ItemConditions
 {
     public class MonoItemConditionFactory_Age : MonoItemConditionFactory<ItemCondition_Age>
     {

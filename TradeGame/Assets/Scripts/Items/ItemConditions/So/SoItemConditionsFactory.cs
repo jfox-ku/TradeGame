@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace DefaultNamespace.Items.ItemConditions
+namespace TradeGameNamespace.Items.ItemConditions
 {
     public class SoItemConditionsFactory : ScriptableObject, IItemConditionsFactory
     {

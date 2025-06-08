@@ -1,8 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using DefaultNamespace;
-using DefaultNamespace.Systems;
+using TradeGameNamespace;
+using TradeGameNamespace.Systems;
 using UnityEngine;
 
 public class MonoGameRoot : MonoBehaviour, IGameRoot
@@ -38,7 +38,7 @@ public class MonoGameRoot : MonoBehaviour, IGameRoot
         }
         
         foreach (var system in _systems) {
-            system.Initialize();
+            system.Initialize(this);
         }
     }
     

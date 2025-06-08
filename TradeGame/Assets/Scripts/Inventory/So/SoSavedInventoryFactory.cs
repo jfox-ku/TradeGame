@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DefaultNamespace.Inventory
+namespace TradeGameNamespace.Inventory
 {
     [CreateAssetMenu(fileName = "SavedInventoryFactory", menuName = "ScriptableObjects/Inventory/SavedInventoryFactory")]
     public class SoSavedInventoryFactory : ScriptableObject, IInventoryFactory

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using DefaultNamespace.Items.ItemConditions;
+using TradeGameNamespace.Items.ItemConditions;
 
-namespace DefaultNamespace.Items
+namespace TradeGameNamespace.Items
 {
     public class Item : IItem
     {

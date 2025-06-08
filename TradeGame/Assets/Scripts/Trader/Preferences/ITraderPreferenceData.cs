@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DefaultNamespace.Trader
+namespace TradeGameNamespace.Trader
 {
     public interface ITraderPreferenceData
     {

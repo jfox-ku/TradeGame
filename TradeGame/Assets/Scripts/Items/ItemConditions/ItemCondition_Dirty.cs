@@ -2,7 +2,7 @@
 
 using UnityEngine;
 
-namespace DefaultNamespace.Items.ItemConditions
+namespace TradeGameNamespace.Items.ItemConditions
 {
     public class ItemCondition_Dirty : ItemCondition
     {

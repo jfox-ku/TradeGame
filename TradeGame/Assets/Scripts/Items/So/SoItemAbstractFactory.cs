@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DefaultNamespace.Items
+namespace TradeGameNamespace.Items
 {
     [CreateAssetMenu(fileName = "ItemAbstractFactory", menuName = "ItemAbstractFactory", order = 0)]
     public class SoItemAbstractFactory : ScriptableObject, IItemFactory

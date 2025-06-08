@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace DefaultNamespace.Systems
+namespace TradeGameNamespace.Systems
 {
     [CreateAssetMenu(fileName = "SoSystemsAbstractFactory", menuName = "Systems/SoSystemsAbstractFactory")]
     public class SoSystemsAbstractFactory : ScriptableObject, ISystemsFactory

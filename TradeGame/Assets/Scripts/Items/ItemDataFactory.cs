@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace.Items
+﻿namespace TradeGameNamespace.Items
 {
     public class ItemDataFactory : IItemDataFactory
     {

@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace.Trader
+﻿namespace TradeGameNamespace.Trader
 {
     public interface ITraderPreference<out T> where T : ITraderPreferenceType
     {

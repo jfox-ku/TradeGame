@@ -1,7 +1,7 @@
-﻿using DefaultNamespace.Inventory;
-using DefaultNamespace.ValueSystem;
+﻿using TradeGameNamespace.Inventory;
+using TradeGameNamespace.ValueSystem;
 
-namespace DefaultNamespace.Trader
+namespace TradeGameNamespace.Trader
 {
     public interface ITrader : IValueEvaluator
     {

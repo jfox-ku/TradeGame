@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace DefaultNamespace.Inventory
+namespace TradeGameNamespace.Inventory
 {
     [Serializable]
     public class SavedInventory : Inventory

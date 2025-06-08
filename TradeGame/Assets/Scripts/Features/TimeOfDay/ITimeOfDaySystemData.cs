@@ -2,7 +2,7 @@
 
 using System;
 
-namespace DefaultNamespace.Features.TimeOfDay
+namespace TradeGameNamespace.Features.TimeOfDay
 {
     public interface ITimeOfDaySystemData
     {

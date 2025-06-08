@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace.Trader
+﻿namespace TradeGameNamespace.Trader
 {
     public interface ITraderDataFactory
     {

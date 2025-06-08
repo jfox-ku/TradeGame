@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace.Trader.So
+﻿namespace TradeGameNamespace.Trader.So
 {
     public class SoTraderDataFactory
     {

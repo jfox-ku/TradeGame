@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace DefaultNamespace.Items.ItemConditions
+namespace TradeGameNamespace.Items.ItemConditions
 {
     [Serializable]
     public abstract class ItemCondition : IItemCondition

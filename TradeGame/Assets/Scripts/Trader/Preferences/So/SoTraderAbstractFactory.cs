@@ -1,7 +1,7 @@
-﻿using DefaultNamespace.Inventory;
+﻿using TradeGameNamespace.Inventory;
 using UnityEngine;
 
-namespace DefaultNamespace.Trader.So
+namespace TradeGameNamespace.Trader.So
 {
     [CreateAssetMenu(fileName = "TraderAbstractFactory", menuName = "ScriptableObjects/Trader/AbstractFactory")]
     public class SoTraderAbstractFactory : ScriptableObject, ITraderFactory

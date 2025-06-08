@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace.Items.ItemCategories
+﻿namespace TradeGameNamespace.Items.ItemCategories
 {
     public abstract class ItemCategory : IItemCategory
     {

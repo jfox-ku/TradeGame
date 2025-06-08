@@ -1,6 +1,6 @@
-﻿using DefaultNamespace.Trader;
+﻿using TradeGameNamespace.Trader;
 
-namespace DefaultNamespace.Items.ItemCategories
+namespace TradeGameNamespace.Items.ItemCategories
 {
     public interface IItemCategory : ITraderPreferenceType
     {

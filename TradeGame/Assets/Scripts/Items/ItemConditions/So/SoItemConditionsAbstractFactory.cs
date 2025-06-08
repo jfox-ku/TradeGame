@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using DefaultNamespace.Items.ItemConditions;
+using TradeGameNamespace.Items.ItemConditions;
 using UnityEngine;
 
-namespace DefaultNamespace.Items
+namespace TradeGameNamespace.Items
 {
     [CreateAssetMenu(fileName = "SoItemConditionsAbstractFactory", menuName = "ScriptableObjects/ItemConditions/SoItemConditionsAbstractFactory")]
     public class SoItemConditionsAbstractFactory : ScriptableObject, IItemConditionsFactory

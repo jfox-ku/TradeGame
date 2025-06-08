@@ -1,6 +1,6 @@
-﻿using DefaultNamespace.Systems;
+﻿using TradeGameNamespace.Systems;
 
-namespace DefaultNamespace.Features.TimeOfDay
+namespace TradeGameNamespace.Features.TimeOfDay
 {
     public class TimeOfDaySystem : ITickSystem
     {
@@ -14,13 +14,13 @@ namespace DefaultNamespace.Features.TimeOfDay
         public TimeOfDaySystem(ITimeOfDaySystemData data) {
             _data = data;
         }
-        
-        public void Initialize() {
-            _currentTime = 0;
-        }
 
         public void Tick(float deltaTime) {
            _currentTime += deltaTime;
+        }
+
+        public void Initialize(ISystemHandler systemHandler) {
+            _currentTime = 0;
         }
     }
 }

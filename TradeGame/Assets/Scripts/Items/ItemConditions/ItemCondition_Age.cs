@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DefaultNamespace.Items.ItemConditions
+namespace TradeGameNamespace.Items.ItemConditions
 {
     public class ItemCondition_Age : ItemCondition
     {

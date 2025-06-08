@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DefaultNamespace.Systems
+namespace TradeGameNamespace.Systems
 {
     public interface ISystemsFactory
     {

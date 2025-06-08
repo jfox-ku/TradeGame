@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace DefaultNamespace.Inventory
+namespace TradeGameNamespace.Inventory
 {
     public class SavedInventoryFactory : IInventoryFactory
     {

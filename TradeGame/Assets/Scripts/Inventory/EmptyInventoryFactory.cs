@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DefaultNamespace.Inventory
+namespace TradeGameNamespace.Inventory
 {
     public class EmptyInventoryFactory : IInventoryFactory
     {

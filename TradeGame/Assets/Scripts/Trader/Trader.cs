@@ -1,8 +1,8 @@
-﻿using DefaultNamespace.Inventory;
-using DefaultNamespace.Items;
-using DefaultNamespace.ValueSystem;
+﻿using TradeGameNamespace.Inventory;
+using TradeGameNamespace.Items;
+using TradeGameNamespace.ValueSystem;
 
-namespace DefaultNamespace.Trader
+namespace TradeGameNamespace.Trader
 {
     public class Trader : ITrader
     {

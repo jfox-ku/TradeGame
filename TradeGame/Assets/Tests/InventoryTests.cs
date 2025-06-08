@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using DefaultNamespace.Inventory;
+using TradeGameNamespace.Inventory;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;

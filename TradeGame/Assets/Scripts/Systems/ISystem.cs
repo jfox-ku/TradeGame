@@ -1,7 +1,7 @@
-﻿namespace DefaultNamespace.Systems
+﻿namespace TradeGameNamespace.Systems
 {
     public interface ISystem
     {
-        void Initialize();
+        void Initialize(ISystemHandler systemHandler);
     }
 }

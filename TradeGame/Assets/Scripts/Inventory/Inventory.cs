@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DefaultNamespace.Inventory
+namespace TradeGameNamespace.Inventory
 {
     [Serializable]
     public class Inventory : IInventory

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DefaultNamespace.Items
+namespace TradeGameNamespace.Items
 {
     public class ItemAbstractFactory : IItemFactory
     {

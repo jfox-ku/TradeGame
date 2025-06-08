@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DefaultNamespace.Items.ItemCategories
+namespace TradeGameNamespace.Items.ItemCategories
 {
     [CreateAssetMenu(fileName = "SoItemCategory_Tech", menuName = "ScriptableObjects/ItemCategories/Tech")]
     public class SoItemCategory_Tech : SoItemCategory<SoItemCategory_Tech>

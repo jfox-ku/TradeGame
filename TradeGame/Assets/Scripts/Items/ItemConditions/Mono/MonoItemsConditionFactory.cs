@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DefaultNamespace.Items.ItemConditions
+namespace TradeGameNamespace.Items.ItemConditions
 {
     public abstract class MonoItemConditionFactory<T> : MonoBehaviour, IItemConditionFactory<T> where T : IItemCondition
     {

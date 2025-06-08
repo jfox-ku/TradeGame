@@ -2,7 +2,7 @@
 using System;
 using UnityEngine;
 
-namespace DefaultNamespace.Features.TimeOfDay
+namespace TradeGameNamespace.Features.TimeOfDay
 {
     [CreateAssetMenu(fileName = "TimeOfDaySystemData", menuName = "ScriptableObjects/Systems/TimeOfDay/TimeOfDaySystemData")]
     public class SoTimeOfDaySystemData :  ScriptableObject, ITimeOfDaySystemData

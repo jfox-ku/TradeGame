@@ -1,7 +1,7 @@
-﻿using DefaultNamespace.Systems;
+﻿using TradeGameNamespace.Systems;
 using UnityEngine;
 
-namespace DefaultNamespace.Features.TimeOfDay
+namespace TradeGameNamespace.Features.TimeOfDay
 {
     [CreateAssetMenu(fileName = "SoTimeOfDaySystemFactory", menuName = "ScriptableObjects/Systems/TimeOfDay/TimeOfDaySystemFactory")]
     public class SoTimeOfDaySystemFactory : ScriptableObject, ISystemFactory<TimeOfDaySystem>

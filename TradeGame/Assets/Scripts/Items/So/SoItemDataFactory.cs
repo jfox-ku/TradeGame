@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using DefaultNamespace.Items.ItemCategories;
+using TradeGameNamespace.Items.ItemCategories;
 using UnityEngine;
 
-namespace DefaultNamespace.Items
+namespace TradeGameNamespace.Items
 {
     [CreateAssetMenu(fileName = "NewItemDataFactory", menuName = "ItemDataFactory")]
     public class SoItemDataFactory : ScriptableObject, IItemDataFactory

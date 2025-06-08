@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DefaultNamespace.Items
+namespace TradeGameNamespace.Items
 {
     public class MonoItemAbstractFactory : MonoBehaviour, IItemFactory
     {

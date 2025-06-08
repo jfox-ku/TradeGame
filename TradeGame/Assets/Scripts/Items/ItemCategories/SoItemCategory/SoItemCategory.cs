@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DefaultNamespace.Items.ItemCategories
+namespace TradeGameNamespace.Items.ItemCategories
 {
     public abstract class SoItemCategory<T> : ScriptableObject, IItemCategory where T : IItemCategory, new()
     {

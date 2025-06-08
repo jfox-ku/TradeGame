@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using DefaultNamespace.Items.ItemCategories;
+using TradeGameNamespace.Items.ItemCategories;
 
-namespace DefaultNamespace.Trader
+namespace TradeGameNamespace.Trader
 {
     public class DefaultTraderCategoryPreferencesFactory : ITraderPreferencesFactory<IItemCategory>
     {

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using DefaultNamespace.Items.ItemCategories;
-using DefaultNamespace.Items.ItemConditions;
+using TradeGameNamespace.Items.ItemCategories;
+using TradeGameNamespace.Items.ItemConditions;
 
-namespace DefaultNamespace.Trader
+namespace TradeGameNamespace.Trader
 {
     public interface ITraderPreferencesCollection
     {

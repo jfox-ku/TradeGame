@@ -1,7 +1,7 @@
-﻿using DefaultNamespace.Trader;
-using DefaultNamespace.ValueSystem;
+﻿using TradeGameNamespace.Trader;
+using TradeGameNamespace.ValueSystem;
 
-namespace DefaultNamespace.Items.ItemConditions
+namespace TradeGameNamespace.Items.ItemConditions
 {
     public interface IItemCondition: IValueEffector, ITraderPreferenceType
     {

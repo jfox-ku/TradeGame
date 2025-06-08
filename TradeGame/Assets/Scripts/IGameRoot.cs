@@ -1,6 +1,6 @@
-﻿using DefaultNamespace.Systems;
+﻿using TradeGameNamespace.Systems;
 
-namespace DefaultNamespace
+namespace TradeGameNamespace
 {
     public interface IGameRoot : ISystemHandler
     {

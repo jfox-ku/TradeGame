@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using DefaultNamespace.Items.ItemCategories;
+using TradeGameNamespace.Items.ItemCategories;
 
-namespace DefaultNamespace.Items
+namespace TradeGameNamespace.Items
 {
     public class ItemData : IItemData
     {

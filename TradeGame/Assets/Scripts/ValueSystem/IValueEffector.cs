@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace.ValueSystem
+﻿namespace TradeGameNamespace.ValueSystem
 {
     public interface IValueEffector
     {

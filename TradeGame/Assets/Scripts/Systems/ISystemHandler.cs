@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace.Systems
+﻿namespace TradeGameNamespace.Systems
 {
     public interface ISystemHandler
     {

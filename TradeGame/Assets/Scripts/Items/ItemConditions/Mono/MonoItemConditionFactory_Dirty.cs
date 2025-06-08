@@ -1,7 +1,7 @@
 ﻿using NaughtyAttributes;
 using UnityEngine;
 
-namespace DefaultNamespace.Items.ItemConditions
+namespace TradeGameNamespace.Items.ItemConditions
 {
     [RequireComponent(typeof(MonoItemConditionsFactory))]
     public class MonoItemConditionFactory_Dirty : MonoItemConditionFactory<ItemCondition_Dirty>

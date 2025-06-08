@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace.Items.ItemConditions
+﻿namespace TradeGameNamespace.Items.ItemConditions
 {
     public interface IItemConditionFactory<out T> where T : IItemCondition
     {

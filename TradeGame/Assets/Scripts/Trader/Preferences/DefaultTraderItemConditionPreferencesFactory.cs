@@ -1,6 +1,6 @@
-﻿using DefaultNamespace.Items.ItemConditions;
+﻿using TradeGameNamespace.Items.ItemConditions;
 
-namespace DefaultNamespace.Trader
+namespace TradeGameNamespace.Trader
 {
     public class DefaultTraderItemConditionPreferencesFactory : ITraderPreferencesFactory<IItemCondition>
     {

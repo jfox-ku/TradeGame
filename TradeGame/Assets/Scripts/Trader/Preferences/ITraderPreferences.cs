@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DefaultNamespace.Trader
+namespace TradeGameNamespace.Trader
 {
     public interface ITraderPreferences<T> : IEnumerable<T> where T : ITraderPreferenceType 
     {

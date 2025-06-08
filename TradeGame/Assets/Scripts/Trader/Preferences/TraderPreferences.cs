@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace DefaultNamespace.Trader
+namespace TradeGameNamespace.Trader
 {
     public class TraderPreferences<T> : ITraderPreferences<T> where T : ITraderPreferenceType
     {

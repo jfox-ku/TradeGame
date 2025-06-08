@@ -1,8 +1,8 @@
-﻿using DefaultNamespace.Inventory;
-using DefaultNamespace.Items.ItemConditions;
-using DefaultNamespace.ValueSystem;
+﻿using TradeGameNamespace.Inventory;
+using TradeGameNamespace.Items.ItemConditions;
+using TradeGameNamespace.ValueSystem;
 
-namespace DefaultNamespace.Items
+namespace TradeGameNamespace.Items
 {
     public interface IItem : IValuable, IInventoryElement, IItemConditionHandler
     {
