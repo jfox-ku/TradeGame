@@ -10,5 +10,13 @@ namespace TradeGameNamespace.Items.Views
             var view = obj.AddComponent<ItemView>();
             return view;
         }
+
+        public IItemView Create(IItem item, IItemViewData data) {
+            var gameObj = new GameObject();
+            var view = gameObj.AddComponent<ItemView>();
+            view.AssignController(item);
+            view.AssignData(data);
+            return view;
+        }
     }
 }

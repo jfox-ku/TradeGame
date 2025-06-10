@@ -5,7 +5,7 @@ namespace TradeGameNamespace.Items
     public class MonoItemAbstractFactory : MonoBehaviour, IItemFactory
     {
         [SerializeField]
-        private InterfaceReference<IItemDataFactory> _itemDataFactory;
+        private InterfaceReference<IItemDefinitionFactory> _itemDataFactory;
         [SerializeField]
         private InterfaceReference<IItemConditionsFactory> _conditionsFactory;
         

@@ -5,18 +5,18 @@ namespace TradeGameNamespace.Items
 {
     public class Item : IItem
     {
-        public float Value => Data.BaseValue;
-        public IItemData Data { get; }
+        public float Value => Definition.BaseValue;
+        public IItemDefinition Definition { get; }
         
         private List<IItemCondition> Conditions { get; }
         
-        public Item(IItemData data) {
-            Data = data;
+        public Item(IItemDefinition definition) {
+            Definition = definition;
             Conditions = new List<IItemCondition>();
         }
         
-        public Item(IItemData data, List<IItemCondition> conditions) {
-            Data = data;
+        public Item(IItemDefinition definition, List<IItemCondition> conditions) {
+            Definition = definition;
             Conditions = conditions;
         }
         

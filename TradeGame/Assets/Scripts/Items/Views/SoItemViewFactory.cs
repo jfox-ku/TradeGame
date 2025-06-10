@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using TradeGameNamespace.Views;
 using UnityEngine;
 
 namespace TradeGameNamespace.Items.Views
@@ -18,6 +19,13 @@ namespace TradeGameNamespace.Items.Views
             }
 
             throw new InvalidDataException("Item prefab must be a MonoBehaviour that implements IItemView interface.");
+        }
+
+        public IItemView Create(IItem obj, IItemViewData data) {
+            var itemView = Create();
+            itemView.AssignController(obj);
+            itemView.AssignData(data);
+            return itemView;
         }
     }
 }

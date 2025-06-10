@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace TradeGameNamespace.Items
 {
@@ -7,13 +8,14 @@ namespace TradeGameNamespace.Items
     {
         private ItemAbstractFactory _internalFactory;
 
+        [FormerlySerializedAs("ItemDataFactory")]
         [SerializeField]
-        private InterfaceReference<IItemDataFactory> ItemDataFactory;
+        private InterfaceReference<IItemDefinitionFactory> ItemDefinitionFactory;
         [SerializeField]
         private InterfaceReference<IItemConditionsFactory> ItemConditionsFactory;
         
         public IItem CreateItem() {
-            _internalFactory ??= new ItemAbstractFactory(ItemDataFactory.Value, ItemConditionsFactory.Value);
+            _internalFactory ??= new ItemAbstractFactory(ItemDefinitionFactory.Value, ItemConditionsFactory.Value);
             return _internalFactory.CreateItem();
         }
     }

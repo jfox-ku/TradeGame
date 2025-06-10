@@ -6,6 +6,6 @@ namespace TradeGameNamespace.Items
 {
     public interface IItem : IValuable, IInventoryElement, IItemConditionHandler
     {
-        IItemData Data { get; }
+        IItemDefinition Definition { get; }
     }
 }

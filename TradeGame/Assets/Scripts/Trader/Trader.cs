@@ -33,7 +33,7 @@ namespace TradeGameNamespace.Trader
         }
 
         private float EvaluateItemCategories(IItem item, float value) {
-            foreach (var dataCategory in item.Data.Categories) {
+            foreach (var dataCategory in item.Definition.Categories) {
                 var categoryPreferenceStrength = Data.PreferencesCollection.GetPreferenceStrength(dataCategory);
                 value *= categoryPreferenceStrength;
             }
@@ -43,7 +43,7 @@ namespace TradeGameNamespace.Trader
         private float EvaluateItemConditions(IItem item, float value) {
             foreach (var itemCondition in item.GetAllConditions()) {
                 if (itemCondition is IValueEffector valueEffector) {
-                    var conditionValueDelta = valueEffector.GetValueDelta(item.Data.BaseValue);
+                    var conditionValueDelta = valueEffector.GetValueDelta(item.Definition.BaseValue);
                     conditionValueDelta *= Data.PreferencesCollection.GetPreferenceStrength(itemCondition);
                     value += conditionValueDelta;
                 }

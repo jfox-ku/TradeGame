@@ -2,6 +2,6 @@
 {
     public interface IItemDefinitionFactory
     {
-        IItemDefinition CreateItemDefinition();
+        IItemDefinition CreateItemData();
     }
 }

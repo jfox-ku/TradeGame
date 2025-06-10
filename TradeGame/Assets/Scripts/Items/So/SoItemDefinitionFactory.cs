@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace TradeGameNamespace.Items
 {
-    public class MonoItemDataFactory : MonoBehaviour, IItemDataFactory
+    [CreateAssetMenu(fileName = "NewItemDataFactory", menuName = "ItemDataFactory")]
+    public class SoItemDefinitionFactory : ScriptableObject, IItemDefinitionFactory
     {
         public string Name;
         public float BaseValue;
@@ -14,8 +15,8 @@ namespace TradeGameNamespace.Items
         
         private List<IItemCategory> CategoriesInternal => Categories.ConvertAll<IItemCategory>(category => category.Value);
         
-        public IItemData CreateItemData() {
-            return new ItemData(
+        public IItemDefinition CreateItemData() {
+            return new ItemDefinition(
                 Name,
                 BaseValue,
                 Weight,
