@@ -9,6 +9,6 @@ namespace TradeGameNamespace.Items
         public float BaseValue { get; }
         public float Weight { get; }
         public string Description { get; }
-        public List<IItemCategory> Categories { get; }
+        public IReadOnlyList<IItemCategory> Categories { get; }
     }
 }

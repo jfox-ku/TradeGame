@@ -1,12 +1,15 @@
 {
-    "name": "Tests",
+    "name": "EditModeTests",
     "rootNamespace": "",
     "references": [
-        "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner",
-        "TradeGameAssembly"
+        "GUID:9338459f1cd90fd4c9ff6248d45114ea",
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:9a88817da2cdeb94388ab1c4165583ac"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,

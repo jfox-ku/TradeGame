@@ -10,23 +10,25 @@ namespace TradeGameNamespace.Items
         public float BaseValue { get; }
         public float Weight { get; }
         public string Description { get; }
-        public List<IItemCategory> Categories { get; }
+        public IReadOnlyList<IItemCategory> Categories { get; }
 
         public ItemDefinition() {
             Name = "Default Item";
-            BaseValue = 0.0f;
-            Weight = 0.0f;
+            BaseValue = 1.0f;
+            Weight = 1.0f;
             Description = "This is a default item description.";
             Categories = new List<IItemCategory>();
         }
         
-        public ItemDefinition(string name, float baseValue, float weight, string description, List<IItemCategory> categories) {
+        public ItemDefinition(string name, float baseValue = 1f, float weight = 1f, string description = "", List<IItemCategory> categories = null) {
             Name = name;
             BaseValue = baseValue;
             Weight = weight;
             Description = description;
             Categories = categories;
         }
+        
+       
 
         public int CompareTo(IItemDefinition other) {
             return String.CompareOrdinal(Name, other.Name);

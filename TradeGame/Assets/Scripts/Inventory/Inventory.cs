@@ -20,6 +20,11 @@ namespace TradeGameNamespace.Inventory
                 Capacity = capacity;
         }
         
+        public Inventory(int capacity = DEFAULT_CAPACITY) {
+            elements = new List<IInventoryElement>();
+            Capacity = capacity;
+        }
+        
         public bool ContainsElement(IInventoryElement element) {
             return elements.Contains(element);
         }

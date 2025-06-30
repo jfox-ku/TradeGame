@@ -17,13 +17,13 @@ namespace TradeGameNamespace.Items
         [SerializeField]
         private string _description;
         [SerializeField]
-        private InterfaceReference<List<IItemCategory>> _categories;
+        private List<InterfaceReference<IItemCategory>> _categories;
 
         public string Name => _name;
         public float BaseValue => _baseValue;
         public float Weight => _weight;
         public string Description => _description;
-        public List<IItemCategory> Categories => _categories;
+        public IReadOnlyList<IItemCategory> Categories => _categories.ConvertAll(category => category.Value);
 
         public int CompareTo(IItemDefinition other) {
             return String.CompareOrdinal(Name, other.Name);
