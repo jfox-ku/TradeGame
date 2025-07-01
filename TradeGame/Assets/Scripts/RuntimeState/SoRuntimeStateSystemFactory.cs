@@ -1,0 +1,14 @@
+﻿using System;
+using TradeGameNamespace.Systems;
+using UnityEngine;
+
+namespace TradeGameNamespace.RuntimeState
+{
+    [CreateAssetMenu(fileName = "SoRuntimeStateSystemFactory", menuName = "Systems/Factories/RuntimeStateSystemFactory")]
+    public class SoRuntimeStateSystemFactory : ScriptableObject, ISystemFactory<RuntimeStateSystem>
+    {
+        public RuntimeStateSystem CreateSystem() {
+            return new RuntimeStateSystem();
+        }
+    }
+}
