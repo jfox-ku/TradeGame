@@ -15,7 +15,7 @@ namespace TradeGameNamespace.RuntimeState
                 throw new InvalidOperationException($"Runtime state with ID {runtimeState.StateID} already exists.");
             }
             
-            
+            runtimeState.OnStateChanged += OnRuntimeStateChanged;
             _runtimeStates.Add((int)runtimeState.StateID, runtimeState);
         }
 
@@ -29,6 +29,7 @@ namespace TradeGameNamespace.RuntimeState
                 throw new InvalidOperationException($"Runtime state with ID {runtimeState} is null.");
             }
             
+            state.OnStateChanged -= OnRuntimeStateChanged;
             _runtimeStates.Remove((int)runtimeState);
             
         }

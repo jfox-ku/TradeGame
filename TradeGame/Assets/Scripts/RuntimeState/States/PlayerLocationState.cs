@@ -6,7 +6,7 @@ namespace TradeGameNamespace.RuntimeState.States
     [Serializable]
     public class PlayerLocationState : IRuntimeState
     {
-        public event Action OnStateChanged;
+        public event Action<IRuntimeState> OnStateChanged;
         public RuntimeStateID StateID => RuntimeStateID.PlayerLocation;
         
         public ILocation CurrentLocation { get; private set; }
@@ -19,9 +19,8 @@ namespace TradeGameNamespace.RuntimeState.States
         public void SetLocation(ILocation newLocation) {
             if (CurrentLocation == newLocation) return;
             CurrentLocation = newLocation;
-            OnStateChanged?.Invoke();
+            OnStateChanged?.Invoke(this);
         }
-        
         
         
     }

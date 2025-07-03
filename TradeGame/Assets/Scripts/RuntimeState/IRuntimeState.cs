@@ -4,7 +4,7 @@ namespace TradeGameNamespace.RuntimeState
 {
     public interface IRuntimeState
     {
-        event Action OnStateChanged;
+        event Action<IRuntimeState> OnStateChanged;
         RuntimeStateID StateID { get; }
     }
 }
