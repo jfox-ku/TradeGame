@@ -2,6 +2,7 @@
 
 namespace TradeGameNamespace.Random
 {
+    [CreateAssetMenu(fileName = "Random", menuName = "Factories/RandomFactory")]
     public class SoRandomFactory : ScriptableObject, IRandomFactory
     {
         [SerializeField]

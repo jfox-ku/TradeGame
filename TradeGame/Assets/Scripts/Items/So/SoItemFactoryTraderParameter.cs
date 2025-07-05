@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace TradeGameNamespace.Items
 {
-    [CreateAssetMenu(fileName = "ItemFactoryTraderParameter", menuName = "Factories/Items/ItemFactoryTraderParameter")]
+    [CreateAssetMenu(fileName = "ItemFactoryTraderParameter", menuName = "Factories/Item/ItemFactoryTraderParameter")]
     public class SoItemFactoryTraderParameter : ScriptableObject, IParameterizedFactory<ITrader, IItem>
     {
         [SerializeField]

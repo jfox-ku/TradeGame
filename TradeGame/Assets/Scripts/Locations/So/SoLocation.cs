@@ -2,7 +2,7 @@
 
 namespace TradeGameNamespace.Locations
 {
-    [CreateAssetMenu(fileName = "Location", menuName = "Location")]
+    [CreateAssetMenu(fileName = "Location", menuName = "Location/Location")]
     public class SoLocation : ScriptableObject, ILocation
     {
         public ILocationDefinition Definition => locationDefinition.Value;

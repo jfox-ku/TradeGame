@@ -7,7 +7,8 @@ namespace TradeGameNamespace.Inventory
     public class Inventory : IInventory
     {
         public const int DEFAULT_CAPACITY = 10;
-        
+
+        public event Action<IInventory> OnInventoryChanged;
         public int Capacity { get; private set; }
         public int ElementCount => elements.Count;
         public bool IsFull => ElementCount >= Capacity;
@@ -38,6 +39,7 @@ namespace TradeGameNamespace.Inventory
                 throw new System.InvalidOperationException("Inventory is full");
             }
             elements.Add(element);
+            OnInventoryChanged?.Invoke(this);
         }
 
         public void RemoveElement(IInventoryElement element) {
@@ -45,6 +47,7 @@ namespace TradeGameNamespace.Inventory
                 throw new System.ArgumentException("Element not found in inventory", nameof(element));
             }
             elements.Remove(element);
+            OnInventoryChanged?.Invoke(this);
         }
     }
 }

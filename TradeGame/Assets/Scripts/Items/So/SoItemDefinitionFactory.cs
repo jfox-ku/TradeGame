@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TradeGameNamespace.Items
 {
-    [CreateAssetMenu(fileName = "NewItemDataFactory", menuName = "ItemDataFactory")]
+    [CreateAssetMenu(fileName = "NewItemDataFactory", menuName = "Factories/Item/ItemDataFactory")]
     public class SoItemDefinitionFactory : ScriptableObject, IItemDefinitionFactory
     {
         public string Name;

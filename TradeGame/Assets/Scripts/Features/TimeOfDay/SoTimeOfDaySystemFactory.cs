@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TradeGameNamespace.Features.TimeOfDay
 {
-    [CreateAssetMenu(fileName = "SoTimeOfDaySystemFactory", menuName = "ScriptableObjects/Systems/TimeOfDay/TimeOfDaySystemFactory")]
+    [CreateAssetMenu(fileName = "SoTimeOfDaySystemFactory", menuName = "Systems/Factories/TimeOfDaySystemFactory")]
     public class SoTimeOfDaySystemFactory : ScriptableObject, ISystemFactory<TimeOfDaySystem>
     {
         [SerializeField]

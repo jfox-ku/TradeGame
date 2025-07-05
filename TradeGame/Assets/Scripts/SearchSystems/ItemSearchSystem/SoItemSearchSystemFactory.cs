@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace TradeGameNamespace.SearchSystems.ItemSearchSystem
 {
-    [CreateAssetMenu(fileName = "ItemSearchSystemFactory", menuName = "Systems/Factories/ItemSearchSystemFactory")]
+    [CreateAssetMenu(fileName = "ItemSearchSystemFactory", menuName = "Systems/Factory/ItemSearchSystemFactory")]
     public class SoItemSearchSystemFactory : ScriptableObject, ISystemFactory<ItemSearchSystem>
     {
         [SerializeField]

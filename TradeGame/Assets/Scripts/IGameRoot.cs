@@ -1,4 +1,5 @@
-﻿using TradeGameNamespace.Systems;
+﻿using TradeGameNamespace.RuntimeState;
+using TradeGameNamespace.Systems;
 
 namespace TradeGameNamespace
 {
@@ -7,5 +8,6 @@ namespace TradeGameNamespace
         void Initialize();
         void StartGame();
         void Shutdown();
+        IRuntimeStateHandler RuntimeStateHandler { get; }
     }
 }

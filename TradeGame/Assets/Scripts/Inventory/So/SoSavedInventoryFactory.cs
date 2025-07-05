@@ -2,7 +2,7 @@
 
 namespace TradeGameNamespace.Inventory
 {
-    [CreateAssetMenu(fileName = "SavedInventoryFactory", menuName = "ScriptableObjects/Inventory/SavedInventoryFactory")]
+    [CreateAssetMenu(fileName = "SavedInventoryFactory", menuName = "Systems/Inventory/SavedInventoryFactory")]
     public class SoSavedInventoryFactory : ScriptableObject, IInventoryFactory
     {
         [SerializeField]

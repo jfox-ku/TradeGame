@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TradeGameNamespace.Locations
 {
-    [CreateAssetMenu(fileName = "New Location Definition", menuName = "Location Definition")]
+    [CreateAssetMenu(fileName = "New Location Definition", menuName = "Location/LocationDefinition")]
     public class SoLocationDefinition : ScriptableObject , ILocationDefinition
     {
         [SerializeField]

@@ -3,7 +3,7 @@ using UnityEngine.Serialization;
 
 namespace TradeGameNamespace.Items
 {
-    [CreateAssetMenu(fileName = "ItemAbstractFactory", menuName = "ItemAbstractFactory", order = 0)]
+    [CreateAssetMenu(fileName = "ItemAbstractFactory", menuName = "Factories/Item/ItemAbstractFactory", order = 0)]
     public class SoItemAbstractFactory : ScriptableObject, IItemFactory
     {
         private ItemAbstractFactory _internalFactory;

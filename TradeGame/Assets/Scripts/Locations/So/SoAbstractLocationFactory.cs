@@ -1,10 +1,8 @@
-﻿using TradeGameNamespace.Items;
-using TradeGameNamespace.Trader.So;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TradeGameNamespace.Locations
 {
-    [CreateAssetMenu(fileName = "Location", menuName = "ScriptableObjects/Location", order = 1)]
+    [CreateAssetMenu(fileName = "Location", menuName = "Factories/Location/AbstractLocationFactory", order = 1)]
     public class SoAbstractLocationFactory : ScriptableObject, ILocationFactory
     {
         

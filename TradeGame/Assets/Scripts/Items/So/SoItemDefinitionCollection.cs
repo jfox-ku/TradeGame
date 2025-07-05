@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TradeGameNamespace.Items
 {
-    [CreateAssetMenu(fileName = "New ItemDefinitionCollection", menuName = "Collections/ItemDefinitionCollection")]
+    [CreateAssetMenu(fileName = "New ItemDefinitionCollection", menuName = "Factories/Item/ItemDefinitionCollection")]
     public class SoItemDefinitionCollection : ScriptableObject, IItemDefinitionCollection
     {
         [SerializeField]

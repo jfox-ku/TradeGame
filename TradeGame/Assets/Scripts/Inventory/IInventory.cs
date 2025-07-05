@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace TradeGameNamespace.Inventory
 {
     public interface IInventory
     {
+        event Action<IInventory> OnInventoryChanged;
         int Capacity { get; }
         int ElementCount { get; }
         bool IsFull { get; }

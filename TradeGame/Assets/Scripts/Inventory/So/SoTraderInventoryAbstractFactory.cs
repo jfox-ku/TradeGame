@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace TradeGameNamespace.Inventory
 {
-    [CreateAssetMenu(fileName = "TraderInventoryFactory", menuName = "Inventory/TraderInventoryAbstractFactory")]
+    [CreateAssetMenu(fileName = "TraderInventoryFactory", menuName = "Systems/Inventory/TraderInventoryAbstractFactory")]
     public class SoTraderInventoryAbstractFactory : ScriptableObject, IInventoryFactory
     {
         [SerializeField]
