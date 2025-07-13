@@ -1,8 +1,9 @@
 ﻿using System;
+using TradeGameNamespace.Systems;
 
 namespace TradeGameNamespace.RuntimeState
 {
-    public interface IRuntimeStateHandler
+    public interface IRuntimeStateHandlerSystem : ISystem
     {
         event Action<IRuntimeState> OnRuntimeStateChanged;
         void AddRuntimeState(IRuntimeState runtimeState);

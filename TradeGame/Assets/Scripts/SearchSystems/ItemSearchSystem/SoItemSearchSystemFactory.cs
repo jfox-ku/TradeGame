@@ -14,7 +14,7 @@ namespace TradeGameNamespace.SearchSystems.ItemSearchSystem
         private InterfaceReference<ISearchSystemData> SearchSystemData;
         
         
-        public ItemSearchSystem CreateSystem() {
+        public ItemSearchSystem Create() {
             return new ItemSearchSystem(SearchSystemData.Value, ItemFactory.Value, RandomFactory.Value.Create());
         }
     }

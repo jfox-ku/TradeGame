@@ -17,7 +17,7 @@ namespace TradeGameNamespace.Items
         private List<IItemDefinition> _itemDefinitions;
 
         protected IRandom Random => _random ??= _randomFactory.Value.Create();
-        protected List<IItemDefinition> ItemDefinitions => _itemDefinitions ??=  new List<IItemDefinition>(_itemDefinitionCollection.Value.GetItems());
+        protected List<IItemDefinition> ItemDefinitions => _itemDefinitions ??=  new List<IItemDefinition>(_itemDefinitionCollection.Value);
 
         public IItem CreateInventoryForTrader(ITrader parameter) {
             var itemDefinition = GetDefinitionForTrader(parameter);

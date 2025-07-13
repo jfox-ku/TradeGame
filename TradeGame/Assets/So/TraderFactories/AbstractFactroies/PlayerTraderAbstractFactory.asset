@@ -15,4 +15,4 @@ MonoBehaviour:
   _inventoryFactoryReference:
     underlyingValue: {fileID: 11400000, guid: 7a92b0e44f1208f408ee39fa8c922790, type: 2}
   _traderDataFactoryReference:
-    underlyingValue: {fileID: 0}
+    underlyingValue: {fileID: 11400000, guid: c851e6220b273de43b92ee87637b0ea1, type: 2}

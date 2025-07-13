@@ -4,7 +4,7 @@ using TradeGameNamespace.Systems;
 
 namespace TradeGameNamespace.RuntimeState
 {
-    public class RuntimeStateSystem : IRuntimeStateHandler, ISystem
+    public class RuntimeStateSystem : IRuntimeStateHandlerSystem
     {
         public event Action<IRuntimeState> OnRuntimeStateChanged;
         

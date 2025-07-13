@@ -6,6 +6,6 @@ namespace TradeGameNamespace.Views
         where TViewSystem : IViewSystem<TObj, TView, TViewData> 
         where TView : IView<TView, IViewData>
     {
-        public abstract IViewSystem<TObj, TView, TViewData> CreateSystem();
+        public abstract IViewSystem<TObj, TView, TViewData> Create();
     }
 }

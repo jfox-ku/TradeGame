@@ -14,7 +14,7 @@ namespace TradeGameNamespace.Systems
         public List<ISystem> CreateSystems() {
             var systems = new List<ISystem>();
             foreach (var factory in _systemFactories) {
-                systems.Add(factory.CreateSystem());
+                systems.Add(factory.Create());
             }
             return systems;
         }

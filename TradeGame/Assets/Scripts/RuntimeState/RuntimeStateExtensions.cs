@@ -5,9 +5,9 @@ namespace TradeGameNamespace.RuntimeState
 {
     public static class RuntimeStateExtensions
     {
-        public static PlayerInventoryValueState GetPlayerInventoryValueState(this IRuntimeStateHandler runtimeStateHandler)
+        public static PlayerInventoryValueState GetPlayerInventoryValueState(this IRuntimeStateHandlerSystem runtimeStateHandlerSystem)
         {
-            var state = runtimeStateHandler.GetRuntimeState(RuntimeStateID.PlayerInventoryValue);
+            var state = runtimeStateHandlerSystem.GetRuntimeState(RuntimeStateID.PlayerInventoryValue);
             if (state is PlayerInventoryValueState playerInventoryValueState)
             {
                 return playerInventoryValueState;
