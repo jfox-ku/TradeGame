@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63ac9f75a9d74872a822c32aef86bc56, type: 3}
-  m_Name: LocationDefinition
+  m_Script: {fileID: 11500000, guid: f4e2d7c7d44545fcbc472e18e0c7eed7, type: 3}
+  m_Name: SavedLocationFactory_Player
   m_EditorClassIdentifier: 
-  _name: Home
+  saveName: PlayerLocation

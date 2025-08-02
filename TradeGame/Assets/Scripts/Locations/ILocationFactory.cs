@@ -1,7 +1,7 @@
 ﻿namespace TradeGameNamespace.Locations
 {
-    public interface ILocationFactory
+    public interface ILocationFactory : IFactory<ILocation>
     {
-        ILocation Create();
+        
     }
 }

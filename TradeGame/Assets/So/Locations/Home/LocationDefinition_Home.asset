@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7df1195b051c4f26b348a3e6d2cedbe5, type: 3}
-  m_Name: Location
+  m_Script: {fileID: 11500000, guid: 63ac9f75a9d74872a822c32aef86bc56, type: 3}
+  m_Name: LocationDefinition_Home
   m_EditorClassIdentifier: 
-  locationDefinition:
-    underlyingValue: {fileID: 11400000, guid: 1ac20b5f713b8f046ac9f65643c5b842, type: 2}
-  locationData:
-    underlyingValue: {fileID: 0}
+  _name: Home

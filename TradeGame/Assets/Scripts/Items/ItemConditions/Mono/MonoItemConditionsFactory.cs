@@ -12,7 +12,7 @@ namespace TradeGameNamespace.Items.ItemConditions
         private List<IItemCondition> InternalItemConditions =>
             itemConditions.ConvertAll<IItemCondition>(condition => condition.Value);
 
-        public List<IItemCondition> CreateItemConditions() {
+        public List<IItemCondition> Create() {
             return InternalItemConditions;
         }
 
@@ -21,7 +21,7 @@ namespace TradeGameNamespace.Items.ItemConditions
             var monoBehaviours = gameObject.GetComponents<MonoBehaviour>();
             foreach (var factory in monoBehaviours) {
                 if (factory is IItemConditionFactory<IItemCondition> itemConditionFactory) {
-                    var itemCondition = itemConditionFactory.CreateItemCondition();
+                    var itemCondition = itemConditionFactory.Create();
                     var reference = new InterfaceReference<IItemCondition>();
                     reference.Value = itemCondition;
                     itemConditions.Add(reference);

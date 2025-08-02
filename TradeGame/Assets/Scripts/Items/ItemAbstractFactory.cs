@@ -4,18 +4,18 @@ namespace TradeGameNamespace.Items
 {
     public class ItemAbstractFactory : IItemFactory
     {
-        private readonly IItemDefinitionFactory _ıtemDefinitionFactory;
+        private readonly IItemDefinitionFactory _itemDefinitionFactory;
         private readonly IItemConditionsFactory _conditionsFactory;
         
-        public ItemAbstractFactory(IItemDefinitionFactory ıtemDefinitionFactory, IItemConditionsFactory conditionsFactory) {
-            _ıtemDefinitionFactory = ıtemDefinitionFactory;
+        public ItemAbstractFactory(IItemDefinitionFactory itemDefinitionFactory, IItemConditionsFactory conditionsFactory) {
+            _itemDefinitionFactory = itemDefinitionFactory;
             _conditionsFactory = conditionsFactory;
         }
         
         public IItem CreateItem() {
             return new Item(
-                _ıtemDefinitionFactory.CreateItemData(),
-                _conditionsFactory.CreateItemConditions()
+                _itemDefinitionFactory.Create(),
+                _conditionsFactory.Create()
             );
         }
     }

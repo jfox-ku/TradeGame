@@ -14,7 +14,7 @@ namespace TradeGameNamespace.Items
         
         private List<IItemCategory> CategoriesInternal => Categories.ConvertAll<IItemCategory>(category => category.Value);
         
-        public IItemDefinition CreateItemData() {
+        public IItemDefinition Create() {
             return new ItemDefinition(
                 Name,
                 BaseValue,

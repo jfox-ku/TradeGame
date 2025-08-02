@@ -10,7 +10,7 @@ namespace TradeGameNamespace.Items
         private InterfaceReference<IItemConditionsFactory> _conditionsFactory;
         
         public IItem CreateItem() {
-            return new Item(_itemDataFactory.Value.CreateItemData(), _conditionsFactory.Value.CreateItemConditions());
+            return new Item(_itemDataFactory.Value.Create(), _conditionsFactory.Value.Create());
         }
     }
 }

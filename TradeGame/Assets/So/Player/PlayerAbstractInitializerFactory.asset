@@ -15,4 +15,4 @@ MonoBehaviour:
   playerTraderFactory:
     underlyingValue: {fileID: 11400000, guid: 2005875be77360440a3edb4894ce76ba, type: 2}
   playerLocationFactory:
-    underlyingValue: {fileID: 0}
+    underlyingValue: {fileID: 11400000, guid: c10c8da3bffc92b4f8ca92390d65421e, type: 2}

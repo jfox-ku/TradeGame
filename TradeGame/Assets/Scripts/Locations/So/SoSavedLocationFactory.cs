@@ -3,7 +3,7 @@
 namespace TradeGameNamespace.Locations
 {
     [CreateAssetMenu(fileName = "SavedLocationFactory", menuName = "Location/SavedLocationFactory")]
-    public class SoSavedLocationFactory : ScriptableObject, IFactory<ILocation>
+    public class SoSavedLocationFactory : ScriptableObject, ILocationFactory
     {
         [SerializeField]
         private string saveName;

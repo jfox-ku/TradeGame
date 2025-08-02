@@ -10,10 +10,10 @@ namespace TradeGameNamespace.Items
         [SerializeField]
         private List<InterfaceReference<IItemConditionFactory<IItemCondition>>> itemConditionFactories;
         
-        public List<IItemCondition> CreateItemConditions() {
+        public List<IItemCondition> Create() {
             var conditions = new List<IItemCondition>();
             foreach (var factoryReference in itemConditionFactories) {
-                var condition = factoryReference.Value.CreateItemCondition();
+                var condition = factoryReference.Value.Create();
                 conditions.Add(condition);
             }
             return conditions;
