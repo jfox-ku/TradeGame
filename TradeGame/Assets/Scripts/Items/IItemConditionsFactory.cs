@@ -3,8 +3,16 @@ using TradeGameNamespace.Items.ItemConditions;
 
 namespace TradeGameNamespace.Items
 {
-    public interface IItemConditionsFactory
+    public interface IItemConditionsFactory : IFactory<List<IItemCondition>>
     {
-        List<IItemCondition> CreateItemConditions();
+        public static IItemConditionsFactory Default => new DefaultItemConditionsFactory();
+    }
+    
+    public class DefaultItemConditionsFactory : IItemConditionsFactory
+    {
+        public List<IItemCondition> Create()
+        {
+            return new List<IItemCondition>();
+        }
     }
 }

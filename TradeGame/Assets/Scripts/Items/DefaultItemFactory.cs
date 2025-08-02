@@ -2,8 +2,8 @@
 {
     public class DefaultItemFactory : IItemFactory
     {
-        public IItem CreateItem() {
-            return new Item(new ItemDefinition());
+        public IItem Create() {
+            return new Item(IItemDefinition.Default);
         }
     }
 }

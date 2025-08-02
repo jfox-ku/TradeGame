@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace TradeGameNamespace.Items
@@ -7,10 +8,31 @@ namespace TradeGameNamespace.Items
     public class SoItemDefinitionCollection : ScriptableObject, IItemDefinitionCollection
     {
         [SerializeField]
-        private List<InterfaceReference<IItemDefinition>> ItemDefinitions;
+        private List<InterfaceReference<IItemDefinition>> itemDefinitions;
+        public List<IItemDefinition> _itemDefinitions;
+
         
-        public IEnumerable<IItemDefinition> GetItems() {
-            return ItemDefinitions.ConvertAll(item => item.Value);
+        public List<IItemDefinition> ItemDefinitions{
+            get {
+                if (_itemDefinitions != null) return _itemDefinitions;
+                _itemDefinitions = new List<IItemDefinition>();
+                foreach (var itemDefinition in itemDefinitions) {
+                    _itemDefinitions.Add(itemDefinition.Value);
+                }
+                return _itemDefinitions;
+            }
         }
+
+        public IEnumerator<IItemDefinition> GetEnumerator() {
+            return ItemDefinitions.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() {
+            return GetEnumerator();
+        }
+
+        public int Count => ItemDefinitions.Count;
+
+        public IItemDefinition this[int index] => ItemDefinitions[index];
     }
 }

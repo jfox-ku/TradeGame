@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af69d3bc66f943528de0fda28c06f32a, type: 3}
+  m_Name: ItemDefinition_Staple
+  m_EditorClassIdentifier: 
+  _name: Staple
+  _baseValue: 0.1
+  _weight: 0.02
+  _description: 
+  _categories:
+  - underlyingValue: {fileID: 11400000, guid: 629309206bebaee4e96a6953492cdd8f, type: 2}
+  _conditionsFactory:
+    underlyingValue: {fileID: 11400000, guid: 7d8f7589f8fbf0e4c8c530eba50322c7, type: 2}

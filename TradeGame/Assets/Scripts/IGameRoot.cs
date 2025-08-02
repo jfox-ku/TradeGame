@@ -8,6 +8,6 @@ namespace TradeGameNamespace
         void Initialize();
         void StartGame();
         void Shutdown();
-        IRuntimeStateHandler RuntimeStateHandler { get; }
+        IRuntimeStateHandlerSystem RuntimeStateHandlerSystem { get; }
     }
 }

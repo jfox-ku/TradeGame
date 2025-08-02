@@ -11,7 +11,7 @@ namespace TradeGameNamespace.Inventory
         SavedInventoryFactory _internalFactory;
         
         public IInventory CreateInventory() {
-            _internalFactory = new SavedInventoryFactory(SaveName);
+            _internalFactory ??= new SavedInventoryFactory(SaveName);
             var inventory = _internalFactory.CreateInventory();
             return inventory;
         }

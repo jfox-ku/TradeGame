@@ -1,11 +1,18 @@
 ﻿using TradeGameNamespace.Items;
 using TradeGameNamespace.Trader.So;
+using Trader;
 
 namespace TradeGameNamespace.Locations
 {
     public interface ILocationData
     {
-        ITraderFactory TraderFactory { get; }
-        IItemFactory ItemFactory { get; }
+        ITraderCollection TraderCollection { get; }
+        IItemCollection ItemCollection { get; }
+
+        static ILocationData Default {
+            get {
+                return new LocationData(ITraderCollection.Default, IItemCollection.Default);
+            }
+        }
     }
 }

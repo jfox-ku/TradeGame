@@ -2,7 +2,7 @@
 {
     public class ItemDefinitionFactory : IItemDefinitionFactory
     {
-        public IItemDefinition CreateItemData() {
+        public IItemDefinition Create() {
             return new ItemDefinition();
         }
     }

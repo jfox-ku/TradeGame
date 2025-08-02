@@ -8,7 +8,7 @@ namespace TradeGameNamespace.Items.ItemConditions
         [SerializeField]
         private List<InterfaceReference<IItemCondition>> ItemConditions;
         
-        public List<IItemCondition> CreateItemConditions() {
+        public List<IItemCondition> Create() {
             var itemConditions = new List<IItemCondition>();
             foreach (var itemConditionReference in ItemConditions) {
                 itemConditions.Add(itemConditionReference.Value);

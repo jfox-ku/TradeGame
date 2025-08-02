@@ -9,8 +9,8 @@ namespace TradeGameNamespace.Items
         [SerializeField]
         private InterfaceReference<IItemConditionsFactory> _conditionsFactory;
         
-        public IItem CreateItem() {
-            return new Item(_itemDataFactory.Value.CreateItemData(), _conditionsFactory.Value.CreateItemConditions());
+        public IItem Create() {
+            return new Item(_itemDataFactory.Value.Create(), _conditionsFactory.Value.Create());
         }
     }
 }

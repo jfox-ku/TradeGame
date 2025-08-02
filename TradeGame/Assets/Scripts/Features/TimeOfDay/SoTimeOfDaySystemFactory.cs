@@ -9,7 +9,7 @@ namespace TradeGameNamespace.Features.TimeOfDay
         [SerializeField]
         private InterfaceReference<ITimeOfDaySystemData> _dataReference;
         
-        public TimeOfDaySystem CreateSystem() {
+        public TimeOfDaySystem Create() {
             return new TimeOfDaySystem(_dataReference.Value);
         }
     }

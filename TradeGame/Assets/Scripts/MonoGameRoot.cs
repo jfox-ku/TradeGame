@@ -1,7 +1,6 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using TradeGameNamespace;
+using TradeGameNamespace.Locations.SaveSystem;
 using TradeGameNamespace.RuntimeState;
 using TradeGameNamespace.Systems;
 using UnityEngine;
@@ -9,11 +8,15 @@ using UnityEngine;
 public class MonoGameRoot : MonoBehaviour, IGameRoot
 {
     public List<InterfaceReference<ISystemsFactory>> SystemsFactory;
-    private List<ISystem> _systems = new List<ISystem>();
-    private List<ITickSystem> _tickSystems = new List<ITickSystem>();
-    public IRuntimeStateHandler RuntimeStateHandler { get; }
+    
+    private List<ISystem> _systemsFromFactories = new List<ISystem>();
+    
+    private IGameRoot _gameRoot;
+    public IRuntimeStateHandlerSystem RuntimeStateHandlerSystem => _gameRoot.RuntimeStateHandlerSystem;
     
     void Start() {
+        CreateMandatorySystems();
+        CreateSystemsFromFactories();
         Initialize();
     }
     
@@ -26,56 +29,32 @@ public class MonoGameRoot : MonoBehaviour, IGameRoot
     }
     
     public void Initialize() {
-        _systems.Clear();
-        
-        AddRuntimeSystem();
-        CreateSystemsFromFactories();
-        CastTickSystems();
-        InitializeSystems();
+        _gameRoot = new GameRoot(_systemsFromFactories);
+        _gameRoot.Initialize();
     }
 
-    private void AddRuntimeSystem() {
-        _systems.Add(new RuntimeStateSystem());
+    private void CreateMandatorySystems() {
+        _systemsFromFactories.Add(new RuntimeStateSystem());
+        _systemsFromFactories.Add(new LocationSaveSystem());
     }
 
     private void CreateSystemsFromFactories() {
         foreach (var systemFactoryReference in SystemsFactory) {
             var systems = systemFactoryReference.Value.CreateSystems();
-            _systems.AddRange(systems);
-        }
-    }
-
-    private void InitializeSystems() {
-        foreach (var system in _systems) {
-            system.Initialize(this);
-        }
-    }
-
-    private void CastTickSystems() {
-        foreach (var system in _systems) {
-            if (system is ITickSystem tickSystem) {
-                _tickSystems.Add(tickSystem);
-            }
+            _systemsFromFactories.AddRange(systems);
         }
     }
 
     public void Tick(float deltaTime) {
-        foreach (var tickSystem in _tickSystems) {
-            tickSystem.Tick(deltaTime);
-        }
+       _gameRoot.Tick(deltaTime);
     }
 
     public void AddSystem(ISystem system) {
-        throw new System.InvalidOperationException("MonoGameRoot does not support adding systems at runtime. Add them in the inspector.");
+        _gameRoot.AddSystem(system);
     }
 
-    public ISystem GetSystem<T>() where T : ISystem {
-        foreach (var system in _systems) {
-            if (system is T castSystem) {
-                return castSystem;
-            }
-        }
-        return null;
+    public T GetSystem<T>() where T : ISystem {
+        return _gameRoot.GetSystem<T>();
     }
     
     public void StartGame() {
@@ -83,7 +62,7 @@ public class MonoGameRoot : MonoBehaviour, IGameRoot
     }
 
     public void Shutdown() {
-        _tickSystems.Clear();
+        _gameRoot = null;
     }
 
     

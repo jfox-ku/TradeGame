@@ -9,7 +9,7 @@ namespace TradeGameNamespace.Items.ItemConditions
         [SerializeField, MinValue(-0), MaxValue(ItemCondition_Dirty.MAX_DIRTY_AMOUNT)]
         private float DirtyAmount = 0f;
         
-        public override ItemCondition_Dirty CreateItemCondition() {
+        public override ItemCondition_Dirty Create() {
             return new ItemCondition_Dirty(DirtyAmount);
         }
     }

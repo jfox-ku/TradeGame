@@ -14,13 +14,10 @@ namespace TradeGameNamespace.Inventory
         public IInventory CreateInventory() {
             FileManager.LoadFromFile(SaveName, out var json);
             var savedInventory = JsonUtility.FromJson<SavedInventory>(json);
-            if (savedInventory == null)
-            {
-                Debug.LogWarning($"No saved inventory found for {SaveName}. Creating a new one.");
-                return new SavedInventory(new List<IInventoryElement>(),Inventory.DEFAULT_CAPACITY, SaveName);
-            }
+            if (savedInventory != null) return savedInventory;
+            Debug.LogWarning($"No saved inventory found for {SaveName}. Creating a new one.");
+            return new SavedInventory(new List<IInventoryElement>(),Inventory.DEFAULT_CAPACITY, SaveName);
 
-            return savedInventory;
         }
     }
 }

@@ -1,21 +1,20 @@
-﻿using System.Collections.Generic;
-
-namespace TradeGameNamespace.Items
+﻿namespace TradeGameNamespace.Items
 {
     public class ItemAbstractFactory : IItemFactory
     {
-        private readonly IItemDefinitionFactory _ıtemDefinitionFactory;
-        private readonly IItemConditionsFactory _conditionsFactory;
+        private readonly IItemDefinitionFactory _itemDefinitionFactory;
         
-        public ItemAbstractFactory(IItemDefinitionFactory ıtemDefinitionFactory, IItemConditionsFactory conditionsFactory) {
-            _ıtemDefinitionFactory = ıtemDefinitionFactory;
-            _conditionsFactory = conditionsFactory;
+        public ItemAbstractFactory(IItemDefinitionFactory itemDefinitionFactory) {
+            _itemDefinitionFactory = itemDefinitionFactory;
         }
         
-        public IItem CreateItem() {
+        public IItem Create() {
+            var itemDefinition = _itemDefinitionFactory.Create();
+            var conditionsFactory = itemDefinition.ConditionsFactory ?? IItemConditionsFactory.Default;
+            
             return new Item(
-                _ıtemDefinitionFactory.CreateItemData(),
-                _conditionsFactory.CreateItemConditions()
+                _itemDefinitionFactory.Create(),
+                conditionsFactory.Create()
             );
         }
     }

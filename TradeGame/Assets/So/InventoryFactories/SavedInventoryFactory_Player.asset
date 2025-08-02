@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6114e62a6dda40409fd22ae54ad58331, type: 3}
   m_Name: SavedInventoryFactory_Player
   m_EditorClassIdentifier: 
-  SaveName: Player
+  SaveName: PlayerInventory

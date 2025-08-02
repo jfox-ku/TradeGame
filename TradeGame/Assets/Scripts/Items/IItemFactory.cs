@@ -1,7 +1,7 @@
 ﻿namespace TradeGameNamespace.Items
 {
-    public interface IItemFactory
+    public interface IItemFactory : IFactory<IItem>
     {
-        IItem CreateItem();
+       
     }
 }

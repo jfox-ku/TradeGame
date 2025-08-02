@@ -2,8 +2,8 @@
 
 namespace TradeGameNamespace.Items
 {
-    public interface IItemDefinitionCollection
+    public interface IItemDefinitionCollection : IReadOnlyList<IItemDefinition>
     {
-        IEnumerable<IItemDefinition> GetItems();
+        
     }
 }

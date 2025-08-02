@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: SystemsAbstractFactory
   m_EditorClassIdentifier: 
   _systemFactoriesReferences:
+  - underlyingValue: {fileID: 11400000, guid: eeab4cda69666d340bc78cc7ebaff263, type: 2}
   - underlyingValue: {fileID: 11400000, guid: 8eb678234436f9a499d2166a54a12939, type: 2}
