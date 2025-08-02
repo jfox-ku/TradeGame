@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af69d3bc66f943528de0fda28c06f32a, type: 3}
-  m_Name: ItemDefinition_Stapler
+  m_Name: ItemDefinition_Lipstick
   m_EditorClassIdentifier: 
-  _name: Stapler
-  _baseValue: 2
-  _weight: 0.2
-  _description: Watch your fingers
+  _name: Lipstick
+  _baseValue: 3
+  _weight: 0.1
+  _description: Very very red
   _categories:
-  - underlyingValue: {fileID: 11400000, guid: 629309206bebaee4e96a6953492cdd8f, type: 2}
+  - underlyingValue: {fileID: 11400000, guid: 8eb9b9fc3c8d90d429c26096e5267faa, type: 2}
   _conditionsFactory:
     underlyingValue: {fileID: 11400000, guid: f03a9d19324507147897f018a2ecbf78, type: 2}

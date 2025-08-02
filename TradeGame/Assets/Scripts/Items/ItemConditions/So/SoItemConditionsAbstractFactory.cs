@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TradeGameNamespace.Items
 {
-    [CreateAssetMenu(fileName = "SoItemConditionsAbstractFactory", menuName = "ScriptableObjects/ItemConditions/SoItemConditionsAbstractFactory")]
+    [CreateAssetMenu(fileName = "SoItemConditionsAbstractFactory", menuName = "ItemConditions/SoItemConditionsAbstractFactory")]
     public class SoItemConditionsAbstractFactory : ScriptableObject, IItemConditionsFactory
     {
         [SerializeField]

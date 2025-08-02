@@ -2,7 +2,7 @@
 
 namespace TradeGameNamespace.Items.ItemCategories
 {
-    [CreateAssetMenu(fileName = "SoItemCategory_Makeup", menuName = "ScriptableObjects/ItemCategories/Makeup")]
+    [CreateAssetMenu(fileName = "SoItemCategory_Makeup", menuName = "Items/ItemCategories/Makeup")]
     public class SoItemCategory_Makeup : SoItemCategory<ItemCategory_MakeUp>
     {
         

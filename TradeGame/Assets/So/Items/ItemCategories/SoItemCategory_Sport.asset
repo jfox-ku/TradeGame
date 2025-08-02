@@ -9,11 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7d76650cd24e59b9d3a07470906203, type: 3}
-  m_Name: ItemDataFactory_USB
+  m_Script: {fileID: 11500000, guid: 414d9a07fe7f4008bc672e9b6c853d3e, type: 3}
+  m_Name: SoItemCategory_Sport
   m_EditorClassIdentifier: 
-  Name: USB
-  BaseValue: 1
-  Weight: 0
-  Description: 
-  Categories: []

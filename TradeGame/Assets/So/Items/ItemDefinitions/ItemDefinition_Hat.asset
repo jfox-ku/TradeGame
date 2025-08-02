@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af69d3bc66f943528de0fda28c06f32a, type: 3}
-  m_Name: ItemDefinition_Stapler
+  m_Name: ItemDefinition_Hat
   m_EditorClassIdentifier: 
-  _name: Stapler
-  _baseValue: 2
-  _weight: 0.2
-  _description: Watch your fingers
+  _name: Baseball Hat
+  _baseValue: 6
+  _weight: 1
+  _description: Go.. somethings!
   _categories:
-  - underlyingValue: {fileID: 11400000, guid: 629309206bebaee4e96a6953492cdd8f, type: 2}
+  - underlyingValue: {fileID: 11400000, guid: e522c304b18abb245b4312d9388d85a7, type: 2}
+  - underlyingValue: {fileID: 11400000, guid: 4beb1b703aaea604f977db54d6b0df76, type: 2}
   _conditionsFactory:
     underlyingValue: {fileID: 11400000, guid: f03a9d19324507147897f018a2ecbf78, type: 2}

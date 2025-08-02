@@ -14,7 +14,7 @@ namespace TradeGameNamespace.SearchSystems.ItemSearchSystem
         }
 
         protected override IItem CreateSearchResult() {
-            return _itemFactory.CreateItem();
+            return _itemFactory.Create();
         }
     }
 }

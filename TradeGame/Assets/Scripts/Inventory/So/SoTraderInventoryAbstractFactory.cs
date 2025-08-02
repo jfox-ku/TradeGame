@@ -32,7 +32,7 @@ namespace TradeGameNamespace.Inventory
         }
 
         protected virtual IItem CreateItem() {
-            return ItemFactory.Value.CreateItem();
+            return ItemFactory.Value.Create();
         }
     }
 }

@@ -2,12 +2,11 @@
 
 namespace EditModeTests.Mocks
 {
-    public class MockItemCategory : IItemCategory
+    public class MockItemCategory : ItemCategory
     {
-        public string Name { get; }
-        public MockItemCategory(string name)
+        public MockItemCategory(string name) : base(name)
         {
-            Name = name;
+            
         }
     }
 }

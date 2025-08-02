@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: ItemDefinition_USB
   m_EditorClassIdentifier: 
   _name: USB
-  _baseValue: 2
-  _weight: 0.2
-  _description: Watch your fingers
+  _baseValue: 4
+  _weight: 0.1
+  _description: Wrong, wrong, wrong, correct!
   _categories:
   - underlyingValue: {fileID: 11400000, guid: 629309206bebaee4e96a6953492cdd8f, type: 2}
   - underlyingValue: {fileID: 11400000, guid: 791cb64f3c10abe4099c8a7e03834d12, type: 2}
+  _conditionsFactory:
+    underlyingValue: {fileID: 11400000, guid: f03a9d19324507147897f018a2ecbf78, type: 2}
