@@ -2,6 +2,7 @@
 {
     public interface ITraderDefinition
     {
+        public string TraderName { get; }
         ITraderData Data { get; }
     }
 }

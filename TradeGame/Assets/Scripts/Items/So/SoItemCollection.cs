@@ -4,10 +4,9 @@ using UnityEngine;
 
 namespace TradeGameNamespace.Items
 {
+    [CreateAssetMenu(fileName = "SoItemCollection", menuName = "Items/ItemCollection")]
     public class SoItemCollection : ScriptableObject, IItemCollection
     {
-        
-        
         public IEnumerator<IItem> GetEnumerator() {
             throw new System.NotImplementedException();
         }

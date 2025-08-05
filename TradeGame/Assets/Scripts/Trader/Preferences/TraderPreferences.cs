@@ -5,13 +5,10 @@ namespace TradeGameNamespace.Trader
 {
     public class TraderPreferences<T> : ITraderPreferences<T> where T : ITraderPreferenceType
     {
-        private Dictionary<T, float> Preferences { get; }
+        public const float DefaultPreferenceStrength = 1f;
         
-        public TraderPreferences() {
-            Preferences = new Dictionary<T, float>();
-        }
-        
-        
+        private Dictionary<T, float> Preferences { get; } = new();
+
         public IEnumerator<T> GetEnumerator() {
            return Preferences.Keys.GetEnumerator();
         }
@@ -25,7 +22,11 @@ namespace TradeGameNamespace.Trader
         }
 
         public float GetPreferenceStrength(T type) {
-            return Preferences[type];
+            return Preferences.GetValueOrDefault(type, DefaultPreferenceStrength);
+        }
+
+        public void SetPreferenceStrength(T type, float strength) {
+            Preferences[type] = strength;
         }
     }
 }

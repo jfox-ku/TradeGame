@@ -9,6 +9,16 @@ namespace TradeGameNamespace.Trader
         public ITraderPreferences<IItemCategory> CategoryPreferences { get; }
         public ITraderPreferences<IItemCondition> ConditionPreferences { get; }
 
+        public TraderPreferencesCollection() {
+            CategoryPreferences = new DefaultTraderCategoryPreferencesFactory().CreatePreferences();
+            ConditionPreferences = new DefaultTraderItemConditionPreferencesFactory().CreatePreferences();
+        }
+
+        public TraderPreferencesCollection(ITraderPreferences<IItemCategory> categoryPreferences, ITraderPreferences<IItemCondition> conditionPreferences)
+        {
+            CategoryPreferences = categoryPreferences;
+            ConditionPreferences = conditionPreferences;
+        }
 
         public float GetPreferenceStrength<T>(T preferenceType) where T : ITraderPreferenceType {
 
@@ -35,15 +45,6 @@ namespace TradeGameNamespace.Trader
             }
         }
 
-        public TraderPreferencesCollection() {
-            CategoryPreferences = new DefaultTraderCategoryPreferencesFactory().CreatePreferences();
-            ConditionPreferences = new DefaultTraderItemConditionPreferencesFactory().CreatePreferences();
-        }
-
-        public TraderPreferencesCollection(ITraderPreferences<IItemCategory> categoryPreferences, ITraderPreferences<IItemCondition> conditionPreferences)
-        {
-            CategoryPreferences = categoryPreferences;
-            ConditionPreferences = conditionPreferences;
-        }
+       
     }
 }

@@ -6,5 +6,6 @@ namespace TradeGameNamespace.Trader
     {
         bool HasPreference(T type);
         float GetPreferenceStrength(T type);
+        void SetPreferenceStrength(T type, float strength);
     }
 }

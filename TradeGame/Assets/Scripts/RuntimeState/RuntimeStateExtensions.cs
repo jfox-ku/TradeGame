@@ -48,5 +48,16 @@ namespace TradeGameNamespace.RuntimeState
 
             throw new Exception("RuntimeStateHandler does not contain a TalkToTraderState.");
         }
+        
+        public static ActiveTradeState GetActiveTradeState(this IRuntimeStateHandlerSystem runtimeStateHandlerSystem)
+        {
+            var state = runtimeStateHandlerSystem.GetRuntimeState(RuntimeStateID.ActiveTrade);
+            if (state is ActiveTradeState activeTradeState)
+            {
+                return activeTradeState;
+            }
+
+            throw new Exception("RuntimeStateHandler does not contain an ActiveTradeState.");
+        }
     }
 }

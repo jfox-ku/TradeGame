@@ -4,13 +4,12 @@ using UnityEngine;
 
 namespace TradeGameNamespace.Items
 {
-    [CreateAssetMenu(fileName = "New ItemDefinitionCollection", menuName = "Factories/Item/ItemDefinitionCollection")]
+    [CreateAssetMenu(fileName = "ItemDefinitionCollection", menuName = "Items/ItemDefinitionCollection")]
     public class SoItemDefinitionCollection : ScriptableObject, IItemDefinitionCollection
     {
         [SerializeField]
         private List<InterfaceReference<IItemDefinition>> itemDefinitions;
-        public List<IItemDefinition> _itemDefinitions;
-
+        private List<IItemDefinition> _itemDefinitions;
         
         public List<IItemDefinition> ItemDefinitions{
             get {
