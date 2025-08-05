@@ -23,14 +23,14 @@ namespace TradeGameNamespace.Trader
         public float GetPreferenceStrength<T>(T preferenceType) where T : ITraderPreferenceType {
 
             if (preferenceType is IItemCategory categoryPreference) {
-                CategoryPreferences.GetPreferenceStrength(categoryPreference);
+                return CategoryPreferences.GetPreferenceStrength(categoryPreference);
             }
             
             if (preferenceType is IItemCondition conditionPreference) {
                 return ConditionPreferences.GetPreferenceStrength(conditionPreference);
             }
 
-            return 0;
+            return 0f;
         }
 
         public IEnumerable<ITraderPreferenceType> GetAllPreferences() {

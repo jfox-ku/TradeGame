@@ -14,5 +14,7 @@ namespace TradeGameNamespace.Inventory
         void AddElement(IInventoryElement element);
         void RemoveElement(IInventoryElement element);
         
+        static IInventory NewEmpty => new Inventory();
+        
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using TradeGameNamespace.Trader;
 
-namespace Trader
+namespace TradeGameNamespace.Trader
 {
     public interface ITraderCollection : IReadOnlyList<ITrader>
     {

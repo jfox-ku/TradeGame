@@ -1,6 +1,5 @@
 ﻿using TradeGameNamespace.Items;
-using TradeGameNamespace.Trader.So;
-using Trader;
+using TradeGameNamespace.Trader;
 
 namespace TradeGameNamespace.Locations
 {

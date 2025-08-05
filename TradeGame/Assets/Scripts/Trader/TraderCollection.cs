@@ -1,8 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TradeGameNamespace.Trader;
 
-namespace Trader
+namespace TradeGameNamespace.Trader
 {
     public class TraderCollection : ITraderCollection
     {

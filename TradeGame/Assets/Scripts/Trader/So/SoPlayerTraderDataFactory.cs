@@ -1,5 +1,4 @@
-﻿using Trader;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TradeGameNamespace.Trader.So
 {

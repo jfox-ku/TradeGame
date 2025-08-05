@@ -1,6 +1,6 @@
 ﻿using TradeGameNamespace.Trader;
 
-namespace Trader
+namespace TradeGameNamespace.Trader
 {
     public class TraderData : ITraderData
     {

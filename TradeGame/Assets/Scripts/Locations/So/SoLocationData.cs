@@ -1,5 +1,5 @@
 ﻿using TradeGameNamespace.Items;
-using Trader;
+using TradeGameNamespace.Trader;
 using UnityEngine;
 
 

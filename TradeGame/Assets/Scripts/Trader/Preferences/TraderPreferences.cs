@@ -5,7 +5,7 @@ namespace TradeGameNamespace.Trader
 {
     public class TraderPreferences<T> : ITraderPreferences<T> where T : ITraderPreferenceType
     {
-        public const float DefaultPreferenceStrength = 1f;
+        public const float DefaultPreferenceStrength = 0f;
         
         private Dictionary<T, float> Preferences { get; } = new();
 
